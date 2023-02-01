@@ -15,7 +15,7 @@ timezone UTC --isUtc
 
 network --bootproto=dhcp
 firewall --enabled --service=ssh
-services --disabled="kdump" --enabled="chronyd,rsyslog,sshd"
+services --disabled="kdump" --enabled="chronyd,rsyslog,sshd,vmtoolsd"
 selinux --enforcing
 
 # TODO: remove "console=tty0" from here
@@ -40,6 +40,7 @@ reboot --eject
 -rhn*
 -iprutils
 -iwl*-firmware
+open-vm-tools
 %end
 
 
