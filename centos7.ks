@@ -26,7 +26,7 @@ repo --name "extras" --baseurl="http://mirror.centos.org/centos/7.9.2009/extras/
 repo --name="openlogic" --baseurl="http://olcentgbl.trafficmanager.net/openlogic/7/openlogic/x86_64/"
 
 # Root password
-rootpw --plaintext "to_be_disabled"
+rootpw --plaintext "almalinux"
 
 # System services
 services --enabled="sshd,waagent,NetworkManager"
@@ -109,7 +109,7 @@ util-linux
 #!/bin/bash
 
 # Disable the root account
-usermod root -p '!!'
+# usermod root -p '!!'
 
 # Set OL repos
 curl -so /etc/yum.repos.d/CentOS.repo https://gist.githubusercontent.com/nvntsin/e45991ee4acf2b411202aea20acda86c/raw/0c642add95a64efb25b9c74e11d3ef1a8d3388c2/CentOS-Base-7.repo
